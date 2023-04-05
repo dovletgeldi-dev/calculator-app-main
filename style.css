@@ -1,0 +1,205 @@
+:root {
+  /* Background */
+  --clr-main-bg-very-dark-des-blue: hsl(222, 26%, 31%);
+  --clr-kpd-bg-very-dark-des-blue: hsl(223, 31%, 20%);
+  --clr-out-bg-very-dark-des-blue: hsl(224, 36%, 15%);
+  --clr-border-blue: hsl(225, 20%, 15%);
+
+  /* Keys */
+  --clr-key-bg-des-dark-blue: hsl(225, 35%, 49%);
+  --clr-key-bg-hover-des-dark-blue: hsl(225, 35%, 69%);
+
+  --clr-key-bg-shad-dark-blue: hsl(224, 28%, 35%);
+  --clr-key-bg-red: hsl(6, 63%, 50%);
+  --clr-key-bg-hover-red: hsl(6, 63%, 60%);
+
+  --clr-key-bg-dark-red: hsl(6, 70%, 34%);
+  --clr-key-bg-light-grayish-orange: hsl(30, 25%, 89%);
+  --clr-key-bg-grayish-orange: hsl(28, 16%, 65%);
+
+  /* Text */
+  --clr-text-very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --clr-text-white: hsl(0, 0%, 100%);
+
+  --ff-accent: "League Spartan", sans-serif;
+
+  --fs-accent: 2em;
+
+  --fw-bold: 700;
+}
+
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* General styling */
+
+body {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  background-color: var(--clr-main-bg-very-dark-des-blue);
+  color: var(--clr-text-white);
+
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-accent);
+
+  margin-inline: 1rem;
+}
+
+.container {
+  border: 3px solid var(--clr-border-blue);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* Output */
+
+.output {
+  display: grid;
+  justify-items: end;
+  align-items: center;
+  gap: 0.5em;
+
+  border-radius: 10px;
+
+  background-color: var(--clr-out-bg-very-dark-des-blue);
+  padding: 1rem 1rem 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.output .current-number {
+  max-width: 220px;
+  font-size: var(--fs-accent);
+  word-break: break-all;
+}
+
+.output p:first-child {
+  font-size: 1.2em;
+}
+
+/* Input */
+
+.input {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--clr-kpd-bg-very-dark-des-blue);
+}
+
+.input > button {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  border: 0;
+  border-radius: 3px;
+
+  color: var(--clr-text-very-dark-grayish-blue);
+  background-color: var(--clr-key-bg-light-grayish-orange);
+  box-shadow: 0 3px var(--clr-key-bg-grayish-orange);
+}
+
+.input > button:is(:hover, :focus) {
+  background-color: var(--clr-text-white);
+}
+
+.input .delete {
+  background-color: var(--clr-key-bg-des-dark-blue);
+  color: var(--clr-text-white);
+  box-shadow: 0 3px var(--clr-key-bg-shad-dark-blue);
+}
+
+.input .delete:is(:hover, :focus) {
+  background-color: var(--clr-key-bg-hover-des-dark-blue);
+}
+
+.input .reset {
+  grid-area: 5 / 1 / 6 / 3;
+  width: 110px;
+
+  background-color: var(--clr-key-bg-des-dark-blue);
+  color: var(--clr-text-white);
+  box-shadow: 0 3px var(--clr-key-bg-shad-dark-blue);
+}
+
+.input .reset:is(:hover, :focus) {
+  background-color: var(--clr-key-bg-hover-des-dark-blue);
+}
+
+.input .equal {
+  grid-area: 5 / 3 / 6 / 5;
+  width: 110px;
+
+  background-color: var(--clr-key-bg-red);
+  color: var(--clr-text-white);
+  box-shadow: 0 3px var(--clr-key-bg-dark-red);
+}
+
+.input .equal:is(:hover, :focus) {
+  background-color: var(--clr-key-bg-hover-red);
+  opacity: 150%;
+}
+
+/* Utility */
+
+.fs-big {
+  font-size: 1.5rem;
+}
