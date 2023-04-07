@@ -108,6 +108,7 @@ body {
 /* Output */
 
 .output {
+  height: 101px;
   display: grid;
   justify-items: end;
   align-items: center;
@@ -120,7 +121,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.output .current-number {
+.output .currentOperation {
   max-width: 220px;
   font-size: var(--fs-accent);
   word-break: break-all;

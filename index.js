@@ -1,8 +1,29 @@
 "use strict";
 
-let firstNumber = 12;
-let secondNumber = 2;
-let currentOperator = "/";
+let firstNumber = 0;
+let secondNumber = 0;
+let currentOperator = "";
+
+const numbersBtn = document.querySelectorAll("#number");
+const operatorsBtn = document.querySelectorAll("#operator");
+const equalsBtn = document.querySelector(".equal");
+const clearBtn = document.querySelector(".clear");
+const deleteBtn = document.querySelector("#deleteNum");
+const dotBtn = document.querySelector(".dot");
+const previousOperationDisplay = document.querySelector(".previousOperation");
+const currentOperationDisplay = document.querySelector(".currentOperation");
+
+numbersBtn.forEach((e) => {
+  e.addEventListener("click", () => populateNumber(e.textContent));
+});
+
+operatorsBtn.forEach((e) => {
+  e.addEventListener("click", () => populateOperator(e.textContent));
+});
+
+const populateNumber = (number) => {
+  currentOperationDisplay.textContent += number;
+};
 
 const add = (a, b) => {
   return a + b;
