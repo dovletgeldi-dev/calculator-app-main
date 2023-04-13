@@ -108,7 +108,7 @@ body {
 /* Output */
 
 .output {
-  height: 101px;
+  min-height: 101px;
   display: grid;
   justify-items: end;
   align-items: center;
