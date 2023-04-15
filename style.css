@@ -15,7 +15,7 @@
 
   --clr-key-bg-dark-red: hsl(6, 70%, 34%);
   --clr-key-bg-light-grayish-orange: hsl(30, 25%, 73%);
-  --clr-key-bg-grayish-orange: hsl(28, 16%, 65%);
+  --clr-key-bg-grayish-orange: hsl(28, 16%, 45%);
 
   /* Text */
   --clr-text-very-dark-grayish-blue: hsl(221, 14%, 31%);
@@ -23,7 +23,7 @@
 
   --ff-accent: "League Spartan", sans-serif;
 
-  --fs-accent: 2em;
+  --fs-accent: 2rem;
 
   --fw-bold: 700;
 }
@@ -96,7 +96,7 @@ body {
   font-weight: var(--fw-bold);
   font-family: var(--ff-accent);
 
-  margin-inline: 1rem;
+  margin-inline: 1em;
 }
 
 .container {
@@ -108,7 +108,7 @@ body {
 /* Output */
 
 .output {
-  min-height: 101px;
+  min-height: 18vh;
   display: grid;
   justify-items: end;
   align-items: center;
@@ -128,7 +128,7 @@ body {
 }
 
 .output p:first-child {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 /* Input */
@@ -196,7 +196,6 @@ body {
 
 .input .equal:is(:hover, :focus) {
   background-color: var(--clr-key-bg-hover-red);
-  opacity: 150%;
 }
 
 /* Utility */
