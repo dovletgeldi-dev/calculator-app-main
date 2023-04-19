@@ -14,12 +14,6 @@ const dotBtn = document.querySelector("#dot");
 const previousOperationDisplay = document.querySelector(".previousOperation");
 const currentOperationDisplay = document.querySelector(".currentOperation");
 
-window.addEventListener("keydown", keyboardInput);
-resetBtn.addEventListener("click", () => resetScreen());
-equalsBtn.addEventListener("click", () => evaluateOperation());
-deleteBtn.addEventListener("click", () => deleteNumber());
-dotBtn.addEventListener("click", () => populateDot());
-
 // to clear after first operation
 const clearScreen = () => {
   currentOperationDisplay.textContent = "";
@@ -147,3 +141,9 @@ const operate = (operator, a, b) => {
       return null;
   }
 };
+
+window.addEventListener("keydown", keyboardInput);
+resetBtn.addEventListener("click", resetScreen);
+equalsBtn.addEventListener("click", evaluateOperation);
+deleteBtn.addEventListener("click", deleteNumber);
+dotBtn.addEventListener("click", populateDot);
